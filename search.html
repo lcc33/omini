@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Search | Omniverse</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background: url(assets/images/searchbg.jpeg);
+        background-position: auto;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      .search-container {
+        position: relative;
+        max-width: 400px;
+        margin: auto;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .search-results {
+        position: absolute;
+        width: 100%;
+        background: linear-gradient(to right, #fff, #454545);
+        border: 1px solid #ccc;
+        display: none;
+        border-radius: 5px;
+        max-height: 200px;
+        overflow-y: auto;
+        color: black;
+      }
+      .search-results div {
+        padding: 10px;
+        cursor: pointer;
+        border-bottom: 1px solid #eee;
+      }
+      .search-results div:hover {
+        background: #040000;
+        color: #fff2ff;
+      }
+      button {
+        font-size: 1rem;
+        padding: 8px 25px;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        background: rgb(0, 59, 126);
+        border: none;
+        transition: box-shadow 1s;
+        cursor: pointer;
+      }
+      button:hover {
+        box-shadow: 5px 5px 10px rgb(1, 51, 109);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html">
+      <button>Back</button>
+    </a>
+    <h1>Search for an Anime</h1>
+    <div class="search-container">
+      <input type="text" id="searchBox" placeholder="Search for an anime..." />
+      <div id="searchResults" class="search-results"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
