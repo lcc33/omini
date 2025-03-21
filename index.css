@@ -47,25 +47,44 @@ a{
     margin-top: 20px;
     text-decoration: none;
 }
-.search button{
-    padding: 20px;
-    border-radius: 20px;
-    width: fit-content;
-    font-size: 1.6rem;
-    background-color: rgba(61, 9, 110, 0.916);
-    border: none;
-    cursor: pointer;
-    transition: 0.5s;
-    color: #fff;
+/* From Uiverse.io by nikk7007 */ 
+.search button {
+ padding: 0.8em 1.8em;
+ border: 2px solid #17C3B2;
+ position: relative;
+ overflow: hidden;
+ background-color: transparent;
+ text-align: center;
+ text-transform: uppercase;
+ font-size: 16px;
+ transition: .3s;
+ z-index: 1;
+ font-family: inherit;
+ color: #17C3B2;
 }
-.search button:hover{
-    background-color: rgba(61, 9, 110, 0.781);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+.search button::before {
+ content: '';
+ width: 0;
+ height: 300%;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%) rotate(45deg);
+ background: #17C3B2;
+ transition: .5s ease;
+ display: block;
+ z-index: -1;
 }
-.search img{
-    width: 25px;
-    margin-left: 5px;
+
+.search button:hover::before {
+ width: 105%;
 }
+
+.search button:hover {
+ color: #111;
+}
+
 img{
     width: 248px;
     justify-self: center;
