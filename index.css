@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Josefin Sans", sans-serif;
+    width: 100%;
+    height: 100vh;
+    background: url(assets/images/japan-background-digital-art.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    scroll-behavior: smooth;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+@keyframes fade-up{
+    0%{
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+/* From Uiverse.io by nikk7007 */ 
+.search button {
+ padding: 0.8em 1em;
+ border: 2px solid #17C3B2;
+ position: relative;
+ overflow: hidden;
+ background-color: transparent;
+ text-align: center;
+ text-transform: uppercase;
+ font-size: 16px;
+ transition: .3s;
+ z-index: 1;
+ font-family: inherit;
+ color: #17C3B2;
+ border-radius: 0 30px 0 30px;
+}
+
+.search button::before {
+ content: '';
+ width: 0;
+ height: 300%;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%) rotate(45deg);
+ background: #17C3B2;
+ transition: .5s ease;
+ display: block;
+ z-index: -1;
+}
+
+.search button:hover::before {
+ width: 105%;
+}
+
+.search button:hover {
+ color: #111;
+}
+
+img{
+    width: 248px;
+    justify-self: center;
+    max-width: 100%
+}
+.svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 15% 0 20%;
+    animation: appear 5s linear;
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full viewport width */
+    margin-top: 15%;
+    margin-bottom: 20%;
+    animation-timeline: view();
+    animation-range: entry 0% cover 70%;
+}
+svg path{
+    fill: transparent;
+    stroke: #fff;
+    
+    stroke-width: 0.1;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: textAnimation 3s ease-in-out 1 forwards;
+}
+
+.anime-section{
+    margin-top: 20px;
+    background-image: radial-gradient(rgba(15, 0, 0, 0.911),rgba(52, 3, 59, 0.575),rgba(9, 9, 82, 0.712),black);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.img{
+    padding-bottom:  30px;
+    margin: 30px 0;
+    width: 40%;
+    border-radius: 20px;
+}
+p{
+    padding: 0;
+    margin: 0;
+    font-size: 5rem;
+    color: rgba(195, 195, 255, 0.89);
+}
+footer{
+    margin-top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 768px) {
+    p {
+        font-size: 3rem;
+    }
+    .img {
+        width: 80%;
+    }
+}
